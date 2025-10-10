@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+html main nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-around;
+}
+html main nav ul li {
+  background-color: antiquewhite;
+  padding: 10px;
+  display: block;
+}
+html main nav ul :nth-child(1) {
+  order: 2;
+}
+html main section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+html main section article {
+  display: flex;
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 50%;
+  /*flex:1;
+                &:nth-child(2) {
+                    flex:2;
+                }*/
+  padding: 20px;
+}
+html main section article img {
+  width: 70px;
+}
