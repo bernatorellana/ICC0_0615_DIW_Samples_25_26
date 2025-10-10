@@ -1,0 +1,140 @@
+html body {
+  width: 100rem;
+  height: 100rem;
+  color: #33FF66;
+  font-family: Palatino Linotype;
+  background-image: url(/imatges/fons.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+html body div.continguts {
+  width: 50%;
+  margin: 0px auto;
+  padding: 10%;
+  background-image: url(/imatges/fons_dif.jpg);
+  text-align: justify;
+  background-size: cover;
+  background-attachment: fixed;
+}
+html body div.continguts p ~ p {
+  background-image: url(/imatges/fons.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 10px;
+}
+html body div h1 {
+  color: #CCFF66;
+  font-family: Verdana;
+  font-size: 1.5em;
+  font-style: italic;
+  font-variant: small-caps;
+  border-bottom: 3px solid #33FF66;
+}
+html body div h1 + p {
+  background-color: rgba(0, 150, 30, 0.6);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+html body div p:first-line {
+  font-size: 1.8em;
+}
+html body div p::first-letter {
+  font-size: 3em;
+  background-color: rgba(200, 64, 112, 0.4);
+  font-style: italic;
+  border-radius: 3px;
+  float: left;
+  margin-right: 5px;
+}
+html body div div.important {
+  width: 100%;
+  min-height: 100px;
+}
+html body div div.important a {
+  color: #33FF66;
+  text-decoration: none;
+  font-size: 0.5em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+html body div div.important p a[href$=".pdf"] {
+  font-size: 50px;
+}
+html body div div.important p:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(/imatges/bullet.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 5px;
+}
+html body div div.important p:not(:first-child)::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(/imatges/word_icon.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+html body div div.important p:not(:first-child):active::before {
+  background: url(/imatges/bullet_active.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html body div div.important p:not(:first-child):hover::before {
+  width: 16px;
+  height: 16px;
+  background: url(/imatges/bullet_hover.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 15px;
+}
+html body div div.important p:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(/imatges/bullet.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 5px;
+}
+html body div div.important p:nth-child(2)::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(/imatges/pdf_icon.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 5px;
+}
+html body div.menu {
+  width: 15%;
+  position: fixed;
+  top: 0;
+  left: 85%;
+}
+html body div ol {
+  list-style: none;
+  text-align: center;
+}
+html body div ol li {
+  background-color: rgba(200, 64, 112, 0.537);
+  font-family: Verdana;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 5px solid #33FF66;
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+html body div ol li:hover {
+  background-color: #CCFF66;
+}
+html body div.peu {
+  border-top: 5px dashed #444444;
+}

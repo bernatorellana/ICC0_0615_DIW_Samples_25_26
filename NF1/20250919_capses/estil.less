@@ -1,0 +1,74 @@
+@color_fondo: rgb(68, 154, 125); 
+
+#com_trilogi_p1_home {
+    
+    font-size:15px;    
+    
+    main{
+    width: 400px;
+    background-color:@color_fondo;
+    display: flex;
+    flex-wrap: wrap;
+    }
+    div.a{
+        padding: 50px;
+        border:1px solid black;
+        width: 200px;
+        background-color: red;
+        box-sizing: border-box;
+    }
+    div.b{
+        width: 200px;
+        background-color: blue;
+    }
+
+    main.noticia {
+        color:green;
+    }
+    .impo {
+        color:orange;
+    }
+
+    div ~ div {
+
+    }
+
+    input[type=text]:focus{
+    border:3px solid red;
+    }
+
+    a[href^=ftp] {
+        font-size:30px;
+    }
+
+    a:hover{
+        background-color: red;
+    }
+
+    p::first-letter {
+        font-size:2em;
+    }
+
+    table,tr,td, th {
+        padding: 5px;
+        font-size:15px;
+        border:1px solid black;
+
+    }
+    table {
+        margin: 10px;
+
+
+        tr:nth-child(2n) {
+        background-color: aquamarine;  
+        }
+        tr:nth-child(2n+1) {
+        background-color: beige;  
+        }
+
+
+        tr:first-child {
+            background-color: aqua;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+div {
+  background-color: yellowgreen;
+  border: 1px solid black;
+  width: 300px;
+  position: relative;
+}
+div:hover {
+  background-color: aqua;
+}
+div:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: 10px solid white;
+  border-bottom-color: #326432;
+  border-left-color: #326432;
+  background-color: rebeccapurple;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}

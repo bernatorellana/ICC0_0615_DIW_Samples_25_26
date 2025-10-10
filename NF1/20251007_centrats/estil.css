@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+  background-color: antiquewhite;
+}
+html div {
+  background-color: red;
+  width: 20%;
+  border-radius: 50% ;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}

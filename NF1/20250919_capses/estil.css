@@ -1,0 +1,58 @@
+#com_trilogi_p1_home {
+  font-size: 15px;
+}
+#com_trilogi_p1_home main {
+  width: 400px;
+  background-color: #449a7d;
+  display: flex;
+  flex-wrap: wrap;
+}
+#com_trilogi_p1_home div.a {
+  padding: 50px;
+  border: 1px solid black;
+  width: 200px;
+  background-color: red;
+  box-sizing: border-box;
+}
+#com_trilogi_p1_home div.b {
+  width: 200px;
+  background-color: blue;
+}
+#com_trilogi_p1_home main.noticia {
+  color: green;
+}
+#com_trilogi_p1_home .impo {
+  color: orange;
+}
+#com_trilogi_p1_home input[type=text]:focus {
+  border: 3px solid red;
+}
+#com_trilogi_p1_home a[href^=ftp] {
+  font-size: 30px;
+}
+#com_trilogi_p1_home a:hover {
+  background-color: red;
+}
+#com_trilogi_p1_home p::first-letter {
+  font-size: 2em;
+}
+#com_trilogi_p1_home table,
+#com_trilogi_p1_home tr,
+#com_trilogi_p1_home td,
+#com_trilogi_p1_home th {
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+#com_trilogi_p1_home table {
+  margin: 10px;
+}
+#com_trilogi_p1_home table tr:nth-child(2n) {
+  background-color: aquamarine;
+}
+#com_trilogi_p1_home table tr:nth-child(2n+1) {
+  background-color: beige;
+}
+#com_trilogi_p1_home table tr:first-child {
+  background-color: aqua;
+}

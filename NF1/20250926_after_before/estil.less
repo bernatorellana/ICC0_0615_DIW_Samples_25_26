@@ -1,0 +1,30 @@
+
+div {
+
+    background-color: yellowgreen;
+    border: 1px solid black;
+    width: 300px;
+    position: relative;
+
+    &:hover {
+        background-color: aqua;
+    }
+
+}
+
+
+
+div:after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    border:10px solid white;
+    border-bottom-color: rgb(50, 100, 50);
+    border-left-color:rgb(50, 100, 50);
+    background-color: rebeccapurple;
+    position: absolute;
+    top:-1px;
+    right:-1px;
+}
+

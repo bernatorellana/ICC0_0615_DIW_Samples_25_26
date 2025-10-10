@@ -1,0 +1,90 @@
+
+@color_separador:#a09d9d;
+@color_back:#e4fffd;
+
+@alsada: 40px;
+
+html {
+    height:100%;
+    background-color: antiquewhite;
+
+    main {
+        padding-top: 50px;
+    }
+
+    nav{
+        height: @alsada;
+        position: fixed;
+        top:0px;
+        left: 0px;
+        background-color: white;
+        width: 100%;
+        
+        > ul {
+            -webkit-box-shadow: 0px 10px 15px 0px #000000; 
+            box-shadow: 0px 10px 15px 0px #00000085;
+     
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            ul {
+                >li {
+                    height: 0px;
+                    transition: all 0.25s;
+                    overflow: hidden;
+                }
+            }
+
+            ul {
+                display: block;
+                width: 100%;
+                position: absolute;
+
+            }
+
+            >li>ul { // segon nivell
+                left: 0px;
+                top:100%;
+
+                ul { // tercer nivell i endavant
+                    left:100%;
+                    top:0%;
+                }
+            }
+        }
+   
+        li{
+            flex:1;
+            height: 0px;
+            line-height: @alsada;
+            padding: 10px;
+            margin: 0px;
+            position: relative;
+            border-bottom:0px solid @color_separador;
+            background-color: @color_back;
+            li{
+                padding: 0px;
+            }
+
+        }
+
+        >ul>li { // Primer nivell de li's
+            height: @alsada;
+        }
+
+        li:hover {
+            background-color: aqua;
+            > ul {
+                > li {
+                    height: @alsada;
+                    padding: 10px;
+                    border-bottom:1px solid @color_separador;
+                    transition: all 0.5s;
+                    overflow: visible;
+                }
+            }
+         }
+        
+        
+    }
+}
