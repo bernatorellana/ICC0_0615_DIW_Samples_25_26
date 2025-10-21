@@ -5,7 +5,6 @@ html body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 html body header {
   display: flex;
@@ -35,6 +34,7 @@ html body header ul li:not(:last-child):after {
 }
 html body main {
   display: flex;
+  flex: 1;
 }
 html body main aside {
   background-color: rebeccapurple;
@@ -48,14 +48,27 @@ html body main section nav ul {
 html body main section nav ul li:not(:last-child):after {
   content: " > ";
 }
-html body main section div {
+html body main section .llista_articles {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 }
-html body main section div article {
+html body main section .llista_articles article {
   width: 33%;
   padding: 10px;
+  height: auto;
   box-sizing: border-box;
+}
+html body main section article {
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  overflow: hidden;
+}
+html body main section article img {
+  width: 30%;
+  padding: 10px;
+  object-fit: cover;
 }
 html body footer {
   height: 100px;
