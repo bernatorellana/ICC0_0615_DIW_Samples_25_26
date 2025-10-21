@@ -12,7 +12,7 @@ html body main .capsa {
   display: grid;
   grid-template-columns: 100px 1fr 1fr;
   grid-template-rows: 100px 1fr 1fr;
-  grid-template-areas: ;
+  grid-template-areas: "H H H" ". . ." "F F F";
   /*
                 .footer {
                     grid-row: 3 / 4 ;
@@ -21,6 +21,14 @@ html body main .capsa {
                 .header {
                     grid-column: 1/ span 3;
                 }*/
+}
+html body main .capsa .footer {
+  grid-area: F;
+  background-color: yellow;
+}
+html body main .capsa .header {
+  grid-area: H;
+  background-color: yellowgreen;
 }
 html body main .capsa div {
   border: 1px solid red;

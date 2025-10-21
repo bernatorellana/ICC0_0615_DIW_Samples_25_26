@@ -13,10 +13,20 @@ html {
                 grid-template-columns: 100px 1fr 1fr;
                 grid-template-rows: 100px 1fr 1fr;
                 grid-template-areas: 
-                "header header header"
+                "H H H"
                 ". . ."
-                "footer footer footer"
-                
+                "F F F";
+                //--------------------------------------------  
+
+                .footer {
+                    grid-area: F;
+                    background-color: yellow;
+                }
+
+                .header {
+                    grid-area: H;
+                    background-color: yellowgreen;
+                }
 
                 /*
                 .footer {
