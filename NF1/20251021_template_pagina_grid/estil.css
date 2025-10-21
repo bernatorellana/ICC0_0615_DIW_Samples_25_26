@@ -1,3 +1,42 @@
 html {
   height: 100%;
 }
+html body {
+  display: grid;
+  grid-template-columns: 20fr 80fr;
+  grid-template-rows: 150px 1fr auto;
+  grid-template-areas: "H H" "S M" "F F";
+}
+html body header {
+  padding: 10px;
+  grid-area: H;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body header ul {
+  display: flex;
+  gap: 10px;
+}
+html body footer {
+  grid-area: F;
+  background-color: lime;
+}
+html body aside {
+  grid-area: S;
+  background-color: violet;
+}
+html body section {
+  grid-area: M;
+}
+html body section nav ul {
+  display: flex;
+}
+html body section .llista_articles {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+}

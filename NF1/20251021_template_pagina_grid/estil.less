@@ -2,6 +2,47 @@
 html {
          height:100%;
     body {
-        
+        display: grid;
+        grid-template-columns: 20fr 80fr;
+        grid-template-rows: 150px 1fr auto;
+        grid-template-areas: 
+                            "H H"
+                            "S M"
+                            "F F";
+        header {
+            padding: 10px;
+            grid-area:H;
+            background-color: yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul {
+                display: flex;
+                gap: 10px;
+            }
+        }
+        footer {
+            grid-area:F;
+            background-color: lime;
+        }
+        aside{
+            grid-area:S;
+            background-color: violet;
+        }
+        section {
+            grid-area:M;
+            nav {
+                ul {
+                    display: flex;
+                }
+            }
+            .llista_articles {
+                padding: 10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                gap:20px;
+            }
+        }
     }
 }
