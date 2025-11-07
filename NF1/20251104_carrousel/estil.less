@@ -1,0 +1,23 @@
+@num_imatges:6;
+@i:5;
+html {
+         height:100%;
+      
+
+         .carroussel{
+            background-color: red;
+            overflow: hidden;
+            height: 200px;
+            .inner {
+                display: flex;
+                width: (500px * @num_imatges);
+                transform:translateX( 0 * (-100% / @num_imatges));
+                transition: 5s all;            
+            }
+            &:hover {
+                .inner {
+                    transform:translateX( 3 * (-100% / @num_imatges));
+                }
+            }
+         }
+}

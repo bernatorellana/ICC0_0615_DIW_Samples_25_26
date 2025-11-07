@@ -40,3 +40,25 @@ html body section .llista_articles {
   grid-template-rows: auto;
   gap: 20px;
 }
+html body section .llista_articles article {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: auto auto;
+  grid-template-areas: "FOTO TITOL" "FOTO DESC";
+}
+html body section .llista_articles article img {
+  width: 100%;
+  height: 100%;
+  grid-area: FOTO;
+  object-fit: cover;
+  display: block;
+}
+html body section .llista_articles article h1 {
+  grid-area: TITOL;
+  font-weight: 800;
+  font-size: 1.4em;
+}
+html body section .llista_articles article p {
+  grid-area: DESC;
+}

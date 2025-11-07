@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+}
+html .carroussel {
+  background-color: red;
+  overflow: hidden;
+  height: 200px;
+}
+html .carroussel .inner {
+  display: flex;
+  width: 3000px;
+  transform: translateX(0%);
+  transition: 5s all;
+}
+html .carroussel:hover .inner {
+  transform: translateX(-50%);
+}
