@@ -1,8 +1,6 @@
 html {
     body {
-
-
-        div {
+        > div {
             min-height: 100vh;
 
             display: flex;
@@ -103,25 +101,52 @@ html {
 
 }
 
-@media screen and (width <=600px) {
+@media screen and (width <=600px) { // FORMAT MÒBIL
 
     #elMasMain {
 
         #menuHandler {
                 display: block;
                 position: absolute;
-                top:0px;
-                right:0px;
+                top:50%;
+                right:10px;
+                transform: translateY(-50%);
+                cursor:cell;
+                &:hover {
+                    color: white;
+                }
         }
 
         main {
 
            display:block;
-
+            
         }
         nav {
+            opacity: 1;
+            transition:all 3s;
+            
             ul{
-                flex-direction: column;
+                display: block;
+                //flex-direction: column;
+                li {
+                    display: block;
+                    height:25px;
+                    line-height:25px;
+                    transition:all 3s;
+                    overflow: hidden;
+                }
+            }
+
+            &.hidden_menu{
+                opacity: 0;
+                transition:all 3s;
+                 li {
+                    height:0px;
+                    padding: 0px;
+                    margin: 0px;
+                    border-width:0px;
+                 }
             }
         }
 
