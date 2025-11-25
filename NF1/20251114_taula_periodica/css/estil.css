@@ -1,0 +1,31 @@
+.taula_periodica {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  /*
+    each(range(18), {
+    .col-@{value} {
+        grid-column: (@value) / span 1;;
+    }
+    });
+
+    each(range(9), {
+    .row-@{value} {
+        grid-row: (@value) / span 1;;
+    }
+    });
+*/
+}
+.taula_periodica .element {
+  border: 1px solid black;
+  display: block;
+  padding: 10px;
+  grid-column: var(--col);
+  grid-row: var(--row);
+}
+.taula_periodica .actinid {
+  display: none;
+}
+.taula_periodica .lantanid {
+  display: none;
+}

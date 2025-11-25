@@ -1,0 +1,9 @@
+html {
+  height: 100%;
+}
+html .landscape {
+  display: block;
+}
+html .portrait {
+  display: none;
+}

@@ -1,0 +1,20 @@
+html {
+  height: 100%;
+}
+html h1 {
+  font-size: 40px;
+}
+html .landscape {
+  display: none;
+}
+html .portrait {
+  display: block;
+}
+@media (300px <= width <= 600px) {
+  html .landscape {
+    display: block;
+  }
+  html .portrait {
+    display: none;
+  }
+}

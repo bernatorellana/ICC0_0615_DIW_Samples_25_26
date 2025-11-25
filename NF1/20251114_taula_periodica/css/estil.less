@@ -1,0 +1,39 @@
+.taula_periodica{
+
+    // ===========================================================
+    // Crear una graella de 9 files x 18 columnes
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+
+    .element{
+        border:1px solid black;
+        display: block;
+        padding: 10px;
+
+        grid-column: var(--col);
+        grid-row: var(--row);
+    }
+
+    // ===========================================================
+    // assignar files i columnes amb les classes
+/*
+    each(range(18), {
+    .col-@{value} {
+        grid-column: (@value) / span 1;;
+    }
+    });
+
+    each(range(9), {
+    .row-@{value} {
+        grid-row: (@value) / span 1;;
+    }
+    });
+*/
+    .actinid{
+        display: none;
+    }
+    .lantanid {
+        display: none;
+    }
+}
