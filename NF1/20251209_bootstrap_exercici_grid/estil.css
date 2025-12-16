@@ -1,0 +1,9 @@
+body .rate,
+body .location {
+  color: rgba(227, 72, 170, 0.872);
+  font-weight: bold;
+}
+body .white {
+  color: white;
+  padding: 20px;
+}
