@@ -1,0 +1,10 @@
+header,
+footer {
+  background-color: yellow;
+}
+main {
+  background-color: green;
+}
+main article {
+  border: 1px solid black;
+}

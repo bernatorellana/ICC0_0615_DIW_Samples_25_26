@@ -1,0 +1,13 @@
+body header,
+body footer {
+  background-color: aquamarine;
+}
+body main {
+  background-color: lightgray;
+}
+body .la_meva {
+  background-color: red;
+}
+body .capses div {
+  border: 1px solid black;
+}
