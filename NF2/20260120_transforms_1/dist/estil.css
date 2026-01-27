@@ -1,0 +1,12 @@
+html {
+  height: 100%;
+}
+html .capsa {
+  background-color: red;
+  width: 200px;
+  height: 50px;
+  border: 4px solid lime;
+  transform: translateX(-58.57864376px) rotate(-45deg);
+  transition: 1s all;
+  transform-origin: 100% 0%;
+}

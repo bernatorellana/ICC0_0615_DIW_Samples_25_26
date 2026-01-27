@@ -1,0 +1,56 @@
+@h:50px;
+@w:50px;
+@h2: @h / 2;
+@w2: @w / 2;
+
+
+@keyframes trump_moscardon {
+   0% {
+      transform: rotate(0deg) translateX(200px) rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg) translateX(200px) rotate(-360deg);
+   }
+}
+
+
+html {
+   
+   body {min-height:100vh;}
+   main {
+      // &:hover{
+      //    .trump{
+      //       transform: rotate(360deg) translateX(200px) rotate(-360deg);
+      //    }
+      // }
+
+      width: 100%;
+      min-height:100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .trump{
+         animation: trump_moscardon 3s linear 0s infinite;
+         width: 50px;
+         transform: rotate(0deg) translateX(200px) rotate(0deg);
+         transition:3s all;
+         img {
+            width: @w;
+            height: @h;
+            object-fit: contain;
+         }
+         position: absolute;
+         top:  ~"calc( 50% - @{h2})";
+         left:  ~"calc( 50% - @{w2})";
+  
+      }
+      .green{
+        > img {width: 200px;}
+         border-radius:50%;
+         //overflow: hidden;
+         position: relative;
+      }
+   }
+
+}
+                     

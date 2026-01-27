@@ -1,0 +1,39 @@
+@keyframes trump_moscardon {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+html body {
+  min-height: 100vh;
+}
+html main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html main .trump {
+  animation: trump_moscardon 3s linear 0s infinite;
+  width: 50px;
+  transform: rotate(0deg) translateX(200px) rotate(0deg);
+  transition: 3s all;
+  position: absolute;
+  top: calc( 50% - 25px);
+  left: calc( 50% - 25px);
+}
+html main .trump img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+html main .green {
+  border-radius: 50%;
+  position: relative;
+}
+html main .green > img {
+  width: 200px;
+}
