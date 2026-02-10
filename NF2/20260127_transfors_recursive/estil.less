@@ -1,0 +1,55 @@
+
+
+@keyframes bambu {
+    0% { transform: translateY(-60px) rotate(5deg);}
+    100% { transform: translateY(-40px) rotate(-5deg);}
+}
+
+
+
+
+.capsa {
+         height:100%;
+
+        &:nth-child(2) > div {
+            left: 55%;
+            div {animation-delay: 0.2s;}
+            
+        }
+         &:nth-child(3) > div {
+            left: 60%;
+            div {animation-delay: 0.4s;}
+        }
+        &:nth-child(4) > div {
+            left: 65%;
+            div {animation-delay: 0.6s;}
+        }
+
+
+        div {
+            background-color: red;
+           transform-origin: 50% 100%; 
+           
+        }
+
+        >div {
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            width: 30px;
+            
+
+                div {
+                    animation: bambu 1s ease-in-out 0s infinite alternate;
+                            width: 95%;
+                            height: 60px;
+                            background-color: red;
+                            border:1px solid black;
+                            transform: translateY(-10px);
+                        }
+
+        }
+
+        
+}
+ 

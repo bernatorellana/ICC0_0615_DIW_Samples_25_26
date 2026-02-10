@@ -1,0 +1,103 @@
+@keyframes loading_ball_animation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(85px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes loading_letters_animation {
+  0% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+html {
+  height: 100vh;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.capsa {
+  justify-content: center;
+  align-items: center;
+}
+.capsa ul {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+.capsa ul li {
+  display: block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation-name: loading_ball_animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  background: radial-gradient(circle, #2a7b9b 0%, #57c785 50%, #eddd53 100%);
+}
+.capsa ul li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.capsa ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.capsa ul li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.capsa ul li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.capsa ul li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.capsa p {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  font-family: Calibri;
+  font-size: 1.2em;
+}
+.capsa p i {
+  animation-name: loading_letters_animation;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+.capsa p i:nth-child(1) {
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+.capsa p i:nth-child(2) {
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.capsa p i:nth-child(3) {
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+.capsa p i:nth-child(4) {
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+.capsa p i:nth-child(5) {
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.capsa p i:nth-child(6) {
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+.capsa p i:nth-child(7) {
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}

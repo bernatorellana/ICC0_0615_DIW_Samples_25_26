@@ -1,0 +1,159 @@
+
+@keyframes beam_animation {
+ 
+	0% {
+		background-position: 0px 0px;
+	}
+    25% {
+		background-position: 0px 3px;
+	}
+    75% {
+
+		background-position: 0px -3x;
+	}
+	100% {
+		background-position: 0px 0px;
+	}
+}
+
+@keyframes layer1_animation{
+    0% {
+        background-position: 0px 100%;
+    }
+    100%{
+        background-position: -2935px 100%;
+    }
+}
+@keyframes layer2_animation{
+    0% {
+        background-position: 0px 100%;
+    }
+    100%{
+        background-position: -2482px 100%;
+    }
+}
+@keyframes layer3_animation{
+    0% {
+        background-position: 0px 100%;
+    }
+    100%{
+        background-position: -1193px 100%;
+    }
+}
+
+@keyframes cloud_animation {
+    0%{
+            left:100%;
+    }
+    100%{
+            left:calc( 0% - 300px);
+    }
+}
+
+html {
+         body {
+            height: 100%;
+            
+            width: 100%;
+            
+            main {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                min-height:100vh; 
+                 background-color: rgb(126, 151, 205);
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                header {
+                    position: relative;
+                    .goku {
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform: translate(-50%, -50%);
+                        &:after {
+                            content:"";
+                            position: absolute;
+                            bottom:30px;
+                            right:calc( 100% - 3px);
+                            display: block;
+                            width: 50vw;
+                            height: 15px;
+                            
+                            animation: beam_animation 50s infinite;
+                            background: linear-gradient(to bottom,  rgba(84,84,84,0) 15%,rgba(84,84,84,0.95) 34%,rgba(84,84,84,1) 35%,rgba(84,84,84,1) 68%,rgba(255,255,255,0) 84%);  
+                        }
+                    }
+                }
+
+
+                i{
+                    position: absolute;
+                    left:100%;
+                    display: block;
+                    background-image: url("../images/cloud.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    opacity: 0.75;
+                    width: 300px;
+                    height:70px;
+                    animation: cloud_animation 5s infinite linear;
+                    &:nth-of-type(1){
+                        top:10%;
+                        
+                    }
+                    &:nth-of-type(2){
+                        animation-delay: 2s;
+                        top:15%;
+                        animation-duration: 7s;
+                    }
+                    &:nth-of-type(3){
+                        animation-delay: 4s;
+                        top:20%;
+                        animation-duration: 9s;
+                    }
+                }
+
+
+
+
+                div {
+                    position: absolute;
+                    top:0px;left:0px;
+                    height: 100%;
+                    width: 100%; 
+                   // background-color: rgb(126, 151, 205);
+                    
+                    
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                    background-position: 0px 100%;
+                    background-repeat: repeat-x;
+
+                    //  opacity: 0.65;
+
+                    &.layer1{
+                        animation-name: layer1_animation ;
+                        background-image: url("../images/fons1.png");    
+                        animation-duration: 10s;              
+                    }
+                    &.layer2{
+                        animation-name: layer2_animation ;
+                        background-image: url("../images/fons2.png");    
+                        animation-duration: 15s;              
+                    }
+                    &.layer3{
+                        animation-name: layer3_animation ;
+                        background-image: url("../images/fons3.png");          
+                        animation-duration: 20s;        
+                    }
+                }
+
+
+            }
+         }
+
+}
