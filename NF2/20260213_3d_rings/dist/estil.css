@@ -1,0 +1,153 @@
+:root {
+  --W: 300px;
+}
+.hola {
+  background-color: red;
+}
+@keyframes anim1 {
+  0% {
+    transform: rotateY(0deg) translateY(20px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(20px) rotateX(90deg);
+  }
+}
+@keyframes anim2 {
+  0% {
+    transform: rotateY(0deg) translateY(40px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(40px) rotateX(90deg);
+  }
+}
+@keyframes anim3 {
+  0% {
+    transform: rotateY(0deg) translateY(60px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(60px) rotateX(90deg);
+  }
+}
+@keyframes anim4 {
+  0% {
+    transform: rotateY(0deg) translateY(80px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(80px) rotateX(90deg);
+  }
+}
+@keyframes anim5 {
+  0% {
+    transform: rotateY(0deg) translateY(100px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(100px) rotateX(90deg);
+  }
+}
+@keyframes anim6 {
+  0% {
+    transform: rotateY(0deg) translateY(120px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(120px) rotateX(90deg);
+  }
+}
+@keyframes anim7 {
+  0% {
+    transform: rotateY(0deg) translateY(140px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(140px) rotateX(90deg);
+  }
+}
+@keyframes anim8 {
+  0% {
+    transform: rotateY(0deg) translateY(160px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(160px) rotateX(90deg);
+  }
+}
+@keyframes anim9 {
+  0% {
+    transform: rotateY(0deg) translateY(180px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(180px) rotateX(90deg);
+  }
+}
+@keyframes anim10 {
+  0% {
+    transform: rotateY(0deg) translateY(200px) rotateX(90deg);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(200px) rotateX(90deg);
+  }
+}
+html {
+  height: 100vh;
+}
+html main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+  perspective-origin: 50% 25%;
+}
+html main .happy_rings {
+  transform-style: preserve-3d;
+  position: relative;
+  width: var(--W);
+  height: var(--W);
+}
+html main .happy_rings div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: var(--W);
+  height: var(--W);
+  border: 6px solid red;
+  transform: rotateY(0deg) translateY(10px) rotateX(70deg);
+  box-shadow: 0px 0px 47px 18px rgba(255, 0, 0, 0.57);
+}
+html main .happy_rings div:nth-child(1) {
+  animation: anim1 10s infinite linear;
+  animation-delay: 0.1s;
+}
+html main .happy_rings div:nth-child(2) {
+  animation: anim2 10s infinite linear;
+  animation-delay: 0.2s;
+}
+html main .happy_rings div:nth-child(3) {
+  animation: anim3 10s infinite linear;
+  animation-delay: 0.3s;
+}
+html main .happy_rings div:nth-child(4) {
+  animation: anim4 10s infinite linear;
+  animation-delay: 0.4s;
+}
+html main .happy_rings div:nth-child(5) {
+  animation: anim5 10s infinite linear;
+  animation-delay: 0.5s;
+}
+html main .happy_rings div:nth-child(6) {
+  animation: anim6 10s infinite linear;
+  animation-delay: 0.6s;
+}
+html main .happy_rings div:nth-child(7) {
+  animation: anim7 10s infinite linear;
+  animation-delay: 0.7s;
+}
+html main .happy_rings div:nth-child(8) {
+  animation: anim8 10s infinite linear;
+  animation-delay: 0.8s;
+}
+html main .happy_rings div:nth-child(9) {
+  animation: anim9 10s infinite linear;
+  animation-delay: 0.9s;
+}
+html main .happy_rings div:nth-child(10) {
+  animation: anim10 10s infinite linear;
+  animation-delay: 1s;
+}

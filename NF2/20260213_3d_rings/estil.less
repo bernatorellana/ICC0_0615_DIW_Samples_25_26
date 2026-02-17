@@ -1,0 +1,69 @@
+@H: 20px;
+:root {
+    --W: 300px;
+}
+
+
+
+.hola{
+    background-color: red;
+}
+
+.keyframes-mixin (@name , @xx) {
+  @keyframes @name {@xx();}
+}
+each(range(10), {
+.keyframes-mixin(~'anim@{value}', {
+    0%{
+        
+        transform: rotateY(0deg) translateY(@value * @H ) rotateX(90deg);
+    }
+    100%{
+        transform: rotateY(360deg) translateY(@value * @H ) rotateX(90deg);
+    }
+});
+})
+
+
+html {
+         height:100vh;
+
+         main{
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 600px;
+            perspective-origin: 50% 25%;
+            .happy_rings{
+                
+                transform-style: preserve-3d;
+                position: relative;
+                    width: var(--W);
+                    height: var(--W);
+                    //background-color: rebeccapurple;
+                div {
+                    position: absolute;
+                    top:0px;
+                    left: 0px;
+                    width: var(--W);
+                    height: var(--W);
+                    border:6px solid red;        
+                    transform: rotateY(0deg) translateY(10px) rotateX(70deg); 
+                    box-shadow: 0px 0px 47px 18px rgba(255, 0, 0, 0.57);           
+                }
+
+                each(range(10), {
+                    div:nth-child(@{value}) {
+                         //transform: rotateY(90deg) translateY(@value * @H ) rotateX(90deg); 
+                        animation: ~'anim@{value}' 10s infinite linear;
+                        animation-delay: @value * 0.1s;
+                    }
+                    
+                });
+
+
+            }
+
+         }
+}
