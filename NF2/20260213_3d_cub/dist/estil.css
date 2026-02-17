@@ -1,0 +1,49 @@
+html {
+  height: 100vh;
+}
+html main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+html main:hover .cube {
+  transform: rotatey(-360deg) rotatex(180deg);
+  transition: 3s all;
+}
+html main .cube {
+  position: relative;
+  transition: 3s all;
+  transform-style: preserve-3d;
+}
+html main .cube div {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+html main .cube .top {
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg);
+}
+html main .cube .bottom {
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg);
+}
+html main .cube .right {
+  transform-origin: 0% 0%;
+  transform: rotateY(-90deg);
+}
+html main .cube .left {
+  transform-origin: 100% 0%;
+  transform: rotateY(90deg);
+}
+html main .cube .front {
+  transform: translateZ(80px);
+}
+html main .cube .back {
+  transform: rotateY(180deg);
+}

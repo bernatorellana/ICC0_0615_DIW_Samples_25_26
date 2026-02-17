@@ -1,0 +1,59 @@
+
+html {
+         height:100vh;
+
+         main{
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+
+            &:hover .cube {
+                transform:rotatey(-360deg) rotatex(180deg);
+                transition: 3s all;
+            }
+
+            .cube{
+                position: relative;
+                transition: 3s all;
+
+                transform-style: preserve-3d;
+
+                div {
+                    backface-visibility: hidden;
+                    position: absolute;
+                    top:0px;
+                    left:0px;            
+                    width: 80px;        
+                    height: 80px;        
+                }
+                .top {
+                    transform-origin: 50% 0%;
+                    transform: rotateX(90deg);
+                }
+                .bottom {
+                    transform-origin: 50% 100%;
+                    transform: rotateX(-90deg);
+                }
+
+                .right{
+                    transform-origin: 0% 0%;
+                    transform: rotateY(-90deg);
+                }
+                
+                .left {
+                    transform-origin: 100% 0%;
+                    transform: rotateY(90deg);
+                }
+
+                .front {
+                    transform: translateZ(80px);
+                }
+                .back{
+                    transform: rotateY(180deg);
+                }
+                
+            }
+         }
+}

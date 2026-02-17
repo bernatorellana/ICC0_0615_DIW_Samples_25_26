@@ -1,0 +1,30 @@
+html {
+  height: 100vh;
+}
+html main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+html main:hover .card {
+  transform: rotatey(180deg);
+  transition: 3s all;
+}
+html main .card {
+  position: relative;
+  transition: 1s all;
+  transform-style: preserve-3d;
+}
+html main .card div {
+  backface-visibility: hidden;
+}
+html main .card .front {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+html main .card .back {
+  transform: rotateY(180deg);
+}
