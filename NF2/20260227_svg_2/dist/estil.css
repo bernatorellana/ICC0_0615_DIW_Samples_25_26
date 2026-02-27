@@ -1,0 +1,39 @@
+@keyframes L_N_animation {
+  from {
+    stroke-dashoffset: 390px;
+    stroke: aqua;
+    fill: #ffffff;
+  }
+  to {
+    stroke-dashoffset: 0px;
+    stroke: black;
+    fill: #e98989;
+  }
+}
+@keyframes L_I_animation {
+  from {
+    stroke-dashoffset: 179px;
+    stroke: aqua;
+    fill: #ffffff;
+  }
+  to {
+    stroke-dashoffset: 0px;
+    stroke: black;
+    fill: #e98989;
+  }
+}
+svg #L_N {
+  fill: #ffffff;
+  stroke: aqua;
+  stroke-dasharray: 390px;
+  stroke-dashoffset: 390px;
+  animation: L_N_animation 5s linear forwards;
+}
+svg #L_I {
+  fill: #ffffff;
+  stroke: aqua;
+  stroke-dasharray: 179px;
+  stroke-dashoffset: 179px;
+  animation: L_I_animation 5s linear forwards;
+  animation-delay: 5s;
+}

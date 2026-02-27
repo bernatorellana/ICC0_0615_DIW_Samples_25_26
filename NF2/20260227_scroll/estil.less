@@ -1,0 +1,35 @@
+
+@keyframes barra_anim_scroll {
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+header{
+    height: 200px;
+    width: 0%;
+    background-color: blanchedalmond;
+    animation: barra_anim_scroll linear;
+    animation-timeline: scroll();
+    animation-range: 0px 200px;
+}
+
+#barra {
+    position: fixed;
+    top:0px;
+    left: 0px;
+    height: 20px;
+    width: 100%;
+    background-color: red; 
+    animation: barra_anim_scroll linear;
+    animation-timeline: scroll();
+}
+@keyframes img_anim {
+    from{scale: 0.6;}
+    to{scale: 1;}
+}
+
+img {
+    scale: 0.6;
+    animation: img_anim linear;
+    animation-timeline: view();
+}
