@@ -1,0 +1,42 @@
+@keyframes flama-animation {
+  0% {
+    transform: translateY(-20px);
+    fill: #ffff00;
+  }
+  100% {
+    transform: translateY(100px);
+    fill: #fbd893;
+  }
+}
+@keyframes cohet-animation {
+  0% {
+    transform: translateY(0vh);
+  }
+  70% {
+    transform: translateY(-50vh);
+  }
+  74% {
+    transform: translateY(-48vh);
+  }
+  100% {
+    transform: translateY(-140vh);
+  }
+}
+main #cohet {
+  position: fixed;
+  top: 100%;
+  left: calc(50% - 100px);
+  animation: cohet-animation 4s;
+}
+main #flama,
+main #flama-1,
+main #flama-2 {
+  fill: #ffff00;
+  fill-opacity: 1;
+  stroke-width: 5;
+  animation: flama-animation 0.25s alternate-reverse infinite linear;
+}
+main #flama-1,
+main #flama-2 {
+  animation-delay: 0.05s;
+}

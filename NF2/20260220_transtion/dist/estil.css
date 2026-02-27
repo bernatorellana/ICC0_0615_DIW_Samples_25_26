@@ -1,0 +1,68 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige ;
+}
+main section {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://picsum.photos/450/300);
+}
+main section:hover ul {
+  opacity: 1;
+  transition: 2s all;
+}
+main section:hover .rombe {
+  opacity: 1;
+  transition: 2s all;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+main section:hover h1 {
+  opacity: 0;
+  transition: 2s all;
+}
+main section:hover li {
+  padding: 10px;
+  transition: 2s all;
+}
+main section h1 {
+  opacity: 1;
+  transition: 0.5s all;
+  font-size: 40px;
+  color: white;
+  font-family: calibri,arial, sans;
+  font-weight: 800;
+}
+main section ul {
+  opacity: 0;
+  transition: 1s all;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+main section ul li {
+  padding: 50px;
+  transition: 2s all;
+}
+main section .rombe {
+  opacity: 0;
+  transition: 1s all;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  width: 40%;
+  aspect-ratio: 1;
+  border: 3px solid white;
+}
